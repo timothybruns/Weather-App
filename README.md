@@ -23,7 +23,7 @@ Your app has multiple components and does the following things:
 - Fetches data from the API when the zip code is submitted
 - Parses the information that comes back from the API call
 - Renders that information on the page
-- **BONUS**: Include the sunrise and sunset times and some information about humidity, atmospheric pressure, etc.
+- **BONUS**: Include the sunrise and sunset times (hint: maybe [Moment.js](https://momentjs.com/) will be helpful!) and some information about humidity, atmospheric pressure, etc.
 - **BONUS**: Upload your completed weather app to BitBalloon.
 
 Things to think about:
