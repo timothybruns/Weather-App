@@ -1,11 +1,10 @@
 # HOMEWORK: Weather App!!!
 
-Wait a second...I think I've heard that before?
+Wait a second... I think I've heard that before...
 
-Yup! You've built a mobile weather app already, BUT tonight you will rebuild it using REACT! 😉
+Yup! You've built a weather app already, BUT tonight you will rebuild it using REACT! 😉
 
 ### A quick reminder of how your app should look:
-
 
 #### Mobile
 
