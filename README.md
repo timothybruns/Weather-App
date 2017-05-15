@@ -18,7 +18,7 @@ Yup! You've built a weather app already, BUT tonight you will rebuild it using R
 
 ### Open Weather API
 
-Hopefully you remmeber working with the [Open Weather Map API](http://openweathermap.org/api). If you don't, check out the [original readme](https://git.generalassemb.ly/nyc-wdi-ada/HW_U02_D02_Methods-APIs/tree/master/api).
+Hopefully you remember working with the [Open Weather Map API](http://openweathermap.org/api). If you don't, check out the [original readme](https://git.generalassemb.ly/nyc-wdi-ada/HW_U02_D02_Methods-APIs/tree/master/api).
 
 
 ## 🚀 Completion looks like:
