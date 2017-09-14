@@ -7,12 +7,14 @@ Yup! You've built a weather app already, BUT today you will rebuild it using REA
 #### First things first: Flow
 
 * Git Tzar will create a `new` repository under their GitHub account and adds the team members as collaborators.
-* As a team, agree upon the responsibilities of each memeber.
+* As a team, agree upon the responsibilities of each member.
 > Note: You have to sketch your app first, break it down into components and designate work to each member of the team.
 * Create a separate branch for each member to work on 
 > Note: make sure to give semantic names to your branches: Ex. "api-call-feature". 
 > Do not name your branches this way: `kates-branch` (it's not explicit what work was done there)
 * Each contributor should be creating Pull Requests that should be approved by ALL members of the team.
+> REMINDER: make sure to write explicit meaningful commit messages. (Ex.: good message- `scaffold the app`, bad message - `update files`)
+
 
 ### A quick reminder of how your app should look:
 
@@ -48,7 +50,7 @@ Things to think about:
 ## 🚀 Your homework submission should include:
 
 - An issue ticket created on this repo. Make sure to include all members' names in the title. 
-- A link to your **Separate** standing repository that ALL team members have contributed to
+- A link to your **Single Separate standing** repository that ALL team members have at least contributed one commit.
 - Completion, comfort, wins, losses, questions... you know the drill.
 
 ## This homework is due 🚨 11PM ON THURSDAY NIGHT 🚨
