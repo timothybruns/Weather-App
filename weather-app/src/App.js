@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import Search from './components/Search';
-import Body from './components/Body';
 import Weather from './components/Weather';
 
 class App extends Component {
@@ -24,18 +23,12 @@ class App extends Component {
       }).catch(err => console.log(err));
   }
 
-  /*renderWeatherInfo() {
-    if (this.state.apiDataLoaded) {
-      return
-    }
-  }*/
 
   render() {
     return (
       <div className="App">
         This is my app!
         <Search />
-        <Body />
       </div>
     );
   }
