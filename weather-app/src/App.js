@@ -4,20 +4,23 @@ import './App.css';
 import Search from './components/Search';
 import Weather from './components/Weather';
 import Loading from './components/Loading';
+import Header from './components/Header';
 
 class App extends Component {
   constructor() {
     super()
       this.state = {
+        currentZip: '06902',
         apiDataLoaded: false,
         weatherData: null,
     }
+    this.handleZip = this.handleZip.bind(this);
   }
 
   componentDidMount() {
-    axios.get('http://api.openweathermap.org/data/2.5/weather?zip=06902&units=imperial&appid=7a279499f2ef484a434e0ebfde261dbc')
+    axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${this.state.currentZip}&units=imperial&appid=7a279499f2ef484a434e0ebfde261dbc`)
     .then(res => {
-      console.log(res.data.main.temp)
+      console.log(this.state.currentZip)
         this.setState({
           weatherData: res.data,
           apiDataLoaded: true,
@@ -25,10 +28,12 @@ class App extends Component {
       }).catch(err => console.log(err));
   }
 
-
-  handleSubmit(zip) {
-
+  handleZip(zip) {
+    this.setState({
+      currentZip: zip,
+    })
   }
+
 
   renderResults() {
     if(this.state.apiDataLoaded) {
@@ -41,12 +46,10 @@ class App extends Component {
     return (
       <div className="App">
       <br/>
-      <form>
-        <label>
-          <input type="text" name="Zip" />
-        </label>
-       <input type="submit" value="Submit" />
-      </form>
+      <br/>
+      <Header
+        handleZip = {this.handleZip}
+       />
         {this.renderResults()}
       </div>
     );
