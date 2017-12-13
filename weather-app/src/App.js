@@ -26,6 +26,10 @@ class App extends Component {
   }
 
 
+  handleSubmit(zip) {
+
+  }
+
   renderResults() {
     if(this.state.apiDataLoaded) {
      return <Search
@@ -36,7 +40,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        This is my app!
+      <br/>
+      <form>
+        <label>
+          <input type="text" name="Zip" />
+        </label>
+       <input type="submit" value="Submit" />
+      </form>
         {this.renderResults()}
       </div>
     );

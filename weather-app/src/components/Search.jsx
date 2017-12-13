@@ -5,7 +5,7 @@ const Search = props => {
   return (
     <div className='search'>
       <Weather
-        searchData={props.weatherData.main.temp}
+        searchData={props.weatherData}
       />
     </div>
   );
