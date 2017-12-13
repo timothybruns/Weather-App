@@ -4,15 +4,11 @@ import Weather from './Weather'
 const Search = props => {
   return (
     <div className='search'>
-      {props.apiData.map(weather => {
-        return (
-          <Weather
-            weather={weather}
-          />
-        );
-      })}
+      <Weather
+        searchData={props.weatherData.main.temp}
+      />
     </div>
-  )
-}
+  );
+};
 
 export default Search;
