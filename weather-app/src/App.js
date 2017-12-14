@@ -29,13 +29,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${this.state.currentZip}&units=imperial&appid=7a279499f2ef484a434e0ebfde261dbc`)
-    .then(res => {
-        this.setState({
-          weatherData: res.data,
-          apiDataLoaded: true,
-        });
-      }).catch(err => console.log(err));
+    this.triggerAPICall(this.state.currentZip);
   }
 
   handleZip(newZip) {
