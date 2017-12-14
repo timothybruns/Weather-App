@@ -21,13 +21,16 @@ class Header extends Component {
     {this.props.handleZip(this.state.value)
     event.preventDefault();
     }
+    this.setState({
+      value: ''
+    });
   }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <input type="text" value={this.state.value} onChange={this.handleChange} placeholder='Enter Zip Code'/>
         </label>
         <input type="submit" value="Submit" />
       </form>

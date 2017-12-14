@@ -15,12 +15,12 @@ class App extends Component {
         weatherData: null,
     }
     this.handleZip = this.handleZip.bind(this);
+    this.triggerAPICall = this.triggerAPICall.bind(this);
   }
 
-  componentDidMount() {
-    axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${this.state.currentZip}&units=imperial&appid=7a279499f2ef484a434e0ebfde261dbc`)
+  triggerAPICall(newZip){
+    axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${newZip}&units=imperial&appid=7a279499f2ef484a434e0ebfde261dbc`)
     .then(res => {
-      console.log(this.state.currentZip)
         this.setState({
           weatherData: res.data,
           apiDataLoaded: true,
@@ -28,10 +28,22 @@ class App extends Component {
       }).catch(err => console.log(err));
   }
 
-  handleZip(zip) {
+  componentDidMount() {
+    axios.get(`http://api.openweathermap.org/data/2.5/weather?zip=${this.state.currentZip}&units=imperial&appid=7a279499f2ef484a434e0ebfde261dbc`)
+    .then(res => {
+        this.setState({
+          weatherData: res.data,
+          apiDataLoaded: true,
+        });
+      }).catch(err => console.log(err));
+  }
+
+  handleZip(newZip) {
     this.setState({
-      currentZip: zip,
+      currentZip: newZip,
     })
+    console.log(`${this.state.currentZip} but it should be ${newZip}`)
+    this.triggerAPICall(newZip);
   }
 
 
