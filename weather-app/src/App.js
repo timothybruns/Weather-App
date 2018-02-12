@@ -36,7 +36,7 @@ class App extends Component {
     this.setState({
       currentZip: newZip,
     })
-    console.log(`${this.state.currentZip} but it should be ${newZip}`)
+    // console.log(`${this.state.currentZip} but it should be ${newZip}`)
     this.triggerAPICall(newZip);
   }
 
